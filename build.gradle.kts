@@ -4,6 +4,7 @@ plugins {
 	id("org.springframework.boot") version "4.2.0"
 	id("io.spring.dependency-management") version "1.1.7"
 	kotlin("plugin.jpa") version "2.4.21"
+	kotlin("kapt") version "2.4.21"
 }
 
 group = "com.yejin"
@@ -26,6 +27,10 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-validation")
 	implementation("org.springframework.boot:spring-boot-starter-webmvc")
 	implementation("org.redisson:redisson-spring-boot-starter:4.8.0")
+	implementation("com.querydsl:querydsl-jpa:5.1.0:jakarta")
+	kapt("com.querydsl:querydsl-apt:5.1.0:jakarta")
+	kapt("jakarta.persistence:jakarta.persistence-api")
+	kapt("jakarta.annotation:jakarta.annotation-api")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("tools.jackson.module:jackson-module-kotlin")
 	runtimeOnly("org.postgresql:postgresql")
