@@ -42,3 +42,6 @@ out/
 ### Docker ###
 docker/data/
 .env
+
+### properties ###
+application-*.properties
